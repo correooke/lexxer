@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Servidor de app lexxer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emiliano Ocariz",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
