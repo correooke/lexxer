@@ -14,7 +14,7 @@ var corsOptions = {
   }
 
 app.use(cors(corsOptions));
-app.use(express.static('../rules/build'));
+//app.use(express.static('./public'));
 
 app.get("/", (req , res) => {
     res.send("Hello");
