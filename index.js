@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs');
+var cors = require('cors')
 const { join } = require('path');
 const app = express();
 
@@ -7,6 +8,12 @@ const lexer_path = '../rules/src/grammars';
 
 const { lstatSync, readdirSync } = require('fs');
 
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
+
+app.use(cors(corsOptions));
 app.use(express.static('../rules/build'));
 
 app.get("/", (req , res) => {
