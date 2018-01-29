@@ -32,6 +32,6 @@ app.get("/grammars", (req, res) => {
 });
 
 
-app.listen(3001, () => {
+app.listen(80, () => {
     console.log("Lexxer Server running");
 });
