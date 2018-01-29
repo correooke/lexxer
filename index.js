@@ -3,6 +3,7 @@ const fs = require('fs');
 var cors = require('cors')
 const { join } = require('path');
 const app = express();
+const PORT = process.env.PORT || 5000
 
 const lexer_path = '../rules/src/grammars';
 
@@ -32,6 +33,6 @@ app.get("/grammars", (req, res) => {
 });
 
 
-app.listen(80, () => {
-    console.log("Lexxer Server running");
+app.listen(PORT, () => {
+    console.log(`Lexxer Server running on port ${PORT}`);
 });
